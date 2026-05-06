@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 
 function Login(){
     const [password, setPassword] = useState('')
     const [username, setUsername] = useState('')
+
+    const navigate = useNavigate()
 
     const handleLogin = async (e) => {
     e.preventDefault()
@@ -15,7 +18,7 @@ function Login(){
 })
 localStorage.setItem('access', response.data.access)
 localStorage.setItem('refresh', response.data.refresh)
-alert('Login successful')
+navigate('/dashboard')
     } catch (error) {
         alert ('Invalid username or password')
     }
@@ -27,6 +30,7 @@ return (
         <label>Password</label>
         <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
         <button onClick={handleLogin}>Login</button>
+        <p>Don't have an account? <a href='/register'>Register here</a></p>
     </div>
 )
 }

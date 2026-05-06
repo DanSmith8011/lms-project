@@ -32,6 +32,7 @@ function Register() {
                 <option value='teacher'>Teacher</option>
             </select>
             <button onClick={handleRegister}>Register</button>
+            <p>Already have an account? <a href='/login'>Login here</a></p>
         </div>
     )
 
