@@ -15,13 +15,28 @@ function Dashboard() {
         setRole(payload.role)
     }, [])
 
-    return (
-        <div>
-            {role === 'student' && <h2>Student Dashboard</h2>}
-            {role === 'teacher' && <h2>Teacher Dashboard</h2>}
-            {role === 'admin' && <h2>Admin Dashboard</h2>}
-        </div>
-    )
+   return (
+    <div>
+        {role === 'student' && (
+            <div>
+                <h2>Student Dashboard</h2>
+                <a href='/courses'>View Courses</a>
+            </div>
+        )}
+        {role === 'teacher' && (
+            <div>
+                <h2>Teacher Dashboard</h2>
+                <a href='/courses'>View Courses</a>
+            </div>
+        )}
+        {role === 'admin' && (
+            <div>
+                <h2>Admin Dashboard</h2>
+                <a href='/courses'>View Courses</a>
+            </div>
+        )}
+    </div>
+)
 }
 
 export default Dashboard
