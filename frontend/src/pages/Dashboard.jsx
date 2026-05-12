@@ -15,7 +15,7 @@ function Dashboard() {
         setRole(payload.role)
     }, [])
 
-   return (
+    return (
     <div>
         {role === 'student' && (
             <div>

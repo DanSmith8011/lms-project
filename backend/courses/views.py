@@ -1,10 +1,12 @@
 from rest_framework import viewsets, permissions
 from .models import Course, Enrolment
 from .serializers import CourseSerializer, EnrolmentSerializer
+from .permissions import IsTeacherOrAdmin
 # Create your views here.
 class CourseViewSet(viewsets.ModelViewSet):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
+    permission_classes = [IsTeacherOrAdmin]
     
 class EnrolmentViewSet(viewsets.ModelViewSet):
     serializer_class = EnrolmentSerializer
