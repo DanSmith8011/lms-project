@@ -3,12 +3,14 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import CourseList from './pages/CourseList'
+import Navbar from './components/Navbar'
 
 function App(){
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
-        <Route path='/' element={<Navigate to='login' />} />
+        <Route path='/' element={<Navigate to='/login' />} />
       <Route path='/login' element={<Login />} />
       <Route path='/register' element={<Register />}/>
       <Route path='/dashboard' element={<Dashboard />} />

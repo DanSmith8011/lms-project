@@ -5,3 +5,4 @@ class IsTeacherOrAdmin(permissions.BasePermission):
         if request.method in permissions.SAFE_METHODS:
             return request.user and request.user.is_authenticated
         return request.user and request.user.is_authenticated and request.user.role in ['teacher', 'admin']
+    
