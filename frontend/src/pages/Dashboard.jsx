@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import CreateCourse from "./CreateCourses"
 
 function Dashboard() {
     const [role, setRole] = useState('')
@@ -28,6 +29,7 @@ function Dashboard() {
             <div>
                 <h2>Teacher Dashboard</h2>
                 <a href='/courses'>View Courses</a>
+                <a href='/createcourse'>Create Course</a>
             </div>
         )}
         {role === 'admin' && (
