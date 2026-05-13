@@ -4,13 +4,15 @@ import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import CourseList from './pages/CourseList'
 import Navbar from './components/Navbar'
+import EnrolledCourses from './pages/EnrolledCourse'
 
 function App(){
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Navigate to='/login' />} />
+      <Route path='/' element={<Navigate to='/login' />} />
+      <Route path='/enrolled' element={<EnrolledCourses /> } />
       <Route path='/login' element={<Login />} />
       <Route path='/register' element={<Register />}/>
       <Route path='/dashboard' element={<Dashboard />} />

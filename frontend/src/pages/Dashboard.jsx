@@ -21,6 +21,7 @@ function Dashboard() {
             <div>
                 <h2>Student Dashboard</h2>
                 <a href='/courses'>View Courses</a>
+                <a href='/enrolled'>My Enrolled Courses</a>
             </div>
         )}
         {role === 'teacher' && (
