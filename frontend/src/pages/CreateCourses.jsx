@@ -24,14 +24,40 @@ function CreateCourse() {
         }
     }
 
-    return (
-        <div>
-            <h2>Create Course</h2>
-            <input type='text' placeholder='Title' value={title} onChange={(e) => setTitle(e.target.value)} />
-            <input type='text' placeholder='Description' value={description} onChange={(e) => setDescription(e.target.value)} />
-            <button onClick={handleSubmit}>Create Course</button>
+  return (
+    <div style={{
+        maxWidth: '600px',
+        margin: '40px auto',
+        padding: '20px'
+    }}>
+        <div style={{
+            backgroundColor: 'white',
+            padding: '40px',
+            borderRadius: '10px',
+            boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+        }}>
+            <h2 style={{ marginBottom: '20px' }}>Create New Course</h2>
+            <input 
+                type='text' 
+                placeholder='Course Title' 
+                value={title} 
+                onChange={(e) => setTitle(e.target.value)} 
+            />
+            <input 
+                type='text' 
+                placeholder='Course Description' 
+                value={description} 
+                onChange={(e) => setDescription(e.target.value)} 
+            />
+            <button 
+                style={{ width: '100%', marginTop: '10px' }} 
+                onClick={handleSubmit}>
+                Create Course
+            </button>
         </div>
-    )
+    </div>
+)
+
 }
 
 export default CreateCourse

@@ -33,18 +33,28 @@ function CourseList() {
         }
     }
 
-    return (
-        <div>
-            <h2>Available Courses</h2>
-            {courses.map(course => (
-                <div key={course.id}>
-                    <h3>{course.title}</h3>
-                    <p>{course.description}</p>
-                    <button onClick={() => handleEnrol(course.id)}>Enrol</button>
-                </div>
-            ))}
-        </div>
-    )
+ return (
+    <div style={{
+        maxWidth: '800px',
+        margin: '40px auto',
+        padding: '20px'
+    }}>
+        <h2>Available Courses</h2>
+        {courses.map(course => (
+            <div key={course.id} style={{
+                backgroundColor: 'white',
+                padding: '20px',
+                borderRadius: '10px',
+                boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+                marginBottom: '15px'
+            }}>
+                <h3 style={{ marginBottom: '10px' }}>{course.title}</h3>
+                <p style={{ color: '#666', marginBottom: '15px' }}>{course.description}</p>
+                <button onClick={() => handleEnrol(course.id)}>Enrol</button>
+            </div>
+        ))}
+    </div>
+)
 }
 
 export default CourseList

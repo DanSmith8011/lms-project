@@ -16,26 +16,41 @@ function Dashboard() {
         setRole(payload.role)
     }, [])
 
-    return (
-    <div>
+return (
+    <div style={{
+        maxWidth: '800px',
+        margin: '40px auto',
+        padding: '20px'
+    }}>
         {role === 'student' && (
-            <div>
+            <div style={{ backgroundColor: 'white', padding: '30px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}>
                 <h2>Student Dashboard</h2>
-                <a href='/courses'>View Courses</a>
-                <a href='/enrolled'>My Enrolled Courses</a>
+                <p style={{ marginBottom: '20px', color: '#666' }}>Welcome back! What would you like to do today?</p>
+                <div style={{ display: 'flex', gap: '10px' }}>
+                    <a href='/courses'><button>View Courses</button></a>
+                    <a href='/enrolled'><button>My Enrolled Courses</button></a>
+                </div>
             </div>
         )}
         {role === 'teacher' && (
-            <div>
+            <div style={{ backgroundColor: 'white', padding: '30px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}>
                 <h2>Teacher Dashboard</h2>
-                <a href='/courses'>View Courses</a>
-                <a href='/createcourse'>Create Course</a>
+                <p style={{ marginBottom: '20px', color: '#666' }}>Manage your courses here.</p>
+                <div style={{ display: 'flex', gap: '10px' }}>
+                    <a href='/courses'><button>View Courses</button></a>
+                    <a href='/createCourse'><button>Create Course</button></a>
+                </div>
             </div>
         )}
         {role === 'admin' && (
-            <div>
+            <div style={{ backgroundColor: 'white', padding: '30px', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}>
                 <h2>Admin Dashboard</h2>
-                <a href='/courses'>View Courses</a>
+                <p style={{ marginBottom: '20px', color: '#666' }}>Manage the platform here.</p>
+                <div style={{ display: 'flex', gap: '10px' }}>
+                    <a href='/courses'><button>View Courses</button></a>
+                    <a href='/AdminUsers'><button>Manage Users</button></a>
+                    <a href='/createCourse'><button>Create Course</button></a>
+                </div>
             </div>
         )}
     </div>

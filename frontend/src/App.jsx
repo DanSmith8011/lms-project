@@ -6,6 +6,7 @@ import CourseList from './pages/CourseList'
 import Navbar from './components/Navbar'
 import EnrolledCourses from './pages/EnrolledCourse'
 import CreateCourse from './pages/CreateCourses'
+import AdminUsers from './pages/AdminUsers'
 
 function App(){
   return (
@@ -19,6 +20,7 @@ function App(){
       <Route path='/dashboard' element={<Dashboard />} />
       <Route path='/courses' element={<CourseList />} />
       <Route path='/createCourse' element={<CreateCourse />} />
+      <Route path='/AdminUsers' element={<AdminUsers />} />
       </Routes>
     </BrowserRouter>
   )

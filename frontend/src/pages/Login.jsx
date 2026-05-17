@@ -24,13 +24,27 @@ navigate('/dashboard')
     }
 }
 return (
-    <div>
-        <label>Username</label>
-        <input type='text' value={username} onChange={(e) => setUsername(e.target.value)} />
-        <label>Password</label>
-        <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
-        <button onClick={handleLogin}>Login</button>
-        <p>Don't have an account? <a href='/register'>Register here</a></p>
+    <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '100vh',
+        backgroundColor: '#f0f4f8'
+    }}>
+        <div style={{
+            backgroundColor: 'white',
+            padding: '40px',
+            borderRadius: '10px',
+            boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+            width: '100%',
+            maxWidth: '400px'
+        }}>
+            <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Welcome Back</h2>
+            <input type='text' placeholder='Username' value={username} onChange={(e) => setUsername(e.target.value)} />
+            <input type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+            <button style={{ width: '100%', marginTop: '10px' }} onClick={handleLogin}>Login</button>
+            <p style={{ textAlign: 'center', marginTop: '15px' }}>Don't have an account? <a href='/register'>Register here</a></p>
+        </div>
     </div>
 )
 }

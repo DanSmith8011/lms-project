@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 
-function Navbar(){ 
+function Navbar() {
     const navigate = useNavigate()
     const token = localStorage.getItem('access')
 
@@ -10,15 +10,24 @@ function Navbar(){
         navigate('/login')
     }
 
-if (!token) return null
+    if (!token) return null
 
     return (
-        <nav>
-            <button onClick={() => navigate('/dashboard')}>Dashboard</button> 
-            <button onClick={() => navigate('/courses')}>Courses</button> 
-            <button onClick={handleLogout}>logout</button> 
+        <nav style={{
+            backgroundColor: '#1a73e8',
+            padding: '15px 30px',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center'
+        }}>
+            <h1 style={{ color: 'white', fontSize: '20px' }}>LMS</h1>
+            <div style={{ display: 'flex', gap: '10px' }}>
+                <button onClick={() => navigate('/dashboard')} style={{ backgroundColor: 'white', color: '#1a73e8' }}>Dashboard</button>
+                <button onClick={() => navigate('/courses')} style={{ backgroundColor: 'white', color: '#1a73e8' }}>Courses</button>
+                <button onClick={handleLogout}>Logout</button>
+            </div>
         </nav>
     )
 }
 
-export default Navbar 
+export default Navbar
