@@ -23,7 +23,7 @@ function CourseList() {
     const handleEnrol = async (courseId) => {
         const token = localStorage.getItem('access')
         try {
-            await axios.post('http://127.0.0.1:8000/api/enrolment/', {
+            await axios.post('https://lms-backend-d72v.onrender.com/api/enrolment/', {
                 course: courseId
             }, {
                 headers: { Authorization: `Bearer ${token}` }
