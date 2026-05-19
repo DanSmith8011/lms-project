@@ -10,7 +10,7 @@ function Register() {
     const handleRegister = async (e) => {
         e.preventDefault()
         try {
-            await axios.post('http://127.0.0.1:8000/api/users/register/', {
+            await axios.post('https://lms-backend-d72v.onrender.com/api/users/register/', {
                 username,
                 email,
                 password,
