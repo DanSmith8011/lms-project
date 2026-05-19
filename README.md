@@ -227,4 +227,8 @@ This is the admin users page wireframe. It shows a list of all users on the plat
 
 ## Deployment
 
-Deployment link to be added.
+**Live Application:** https://glittering-flan-17ad35.netlify.app
+
+**Backend API:** https://lms-backend-d72v.onrender.com
+
+The frontend is deployed on Netlify and the backend API is deployed on Render.
