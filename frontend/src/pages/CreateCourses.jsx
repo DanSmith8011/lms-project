@@ -11,7 +11,7 @@ function CreateCourse() {
         e.preventDefault()
         const token = localStorage.getItem('access')
         try {
-            await axios.post('http://127.0.0.1:8000/api/courses/', {
+            await axios.post('https://lms-backend-d72v.onrender.com/api/courses/', {
                 title,
                 description
             }, {

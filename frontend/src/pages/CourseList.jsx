@@ -13,7 +13,7 @@ function CourseList() {
             navigate('/login')
             return
         }
-        axios.get('http://127.0.0.1:8000/api/courses/', {
+        axios.get('https://lms-backend-d72v.onrender.com/api/courses/', {
             headers: { Authorization: `Bearer ${token}` }
         })
         .then(response => setCourses(response.data))

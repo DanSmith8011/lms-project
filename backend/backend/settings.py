@@ -136,6 +136,6 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
+    'https://glittering-flan-17ad35.netlify.app',
 ]
-
 AUTH_USER_MODEL = 'users.CustomUser'

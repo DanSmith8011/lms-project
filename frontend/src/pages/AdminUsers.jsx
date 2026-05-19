@@ -12,7 +12,7 @@ function AdminUsers() {
             navigate('/login')
             return
         }
-        axios.get('http://127.0.0.1:8000/api/users/all-users/', {
+        axios.get('https://lms-backend-d72v.onrender.com/api/users/all-users/', {
             headers: { Authorization: `Bearer ${token}` }
         })
         .then(response => setUsers(response.data))

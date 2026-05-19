@@ -12,7 +12,7 @@ function EnrolledCourses() {
             navigate('/login')
             return
         }
-        axios.get('http://127.0.0.1:8000/api/enrolment/', {
+        axios.get('https://lms-backend-d72v.onrender.com/api/enrolment/', {
             headers: { Authorization: `Bearer ${token}` }
     })
     .then(reponse => setEnrolments(reponse.data))

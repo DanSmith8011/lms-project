@@ -13,7 +13,7 @@ function Login(){
     const handleLogin = async (e) => {
     e.preventDefault()
     try {
-        const response = await axios.post('http://127.0.0.1:8000/api/users/login/', {
+        const response = await axios.post('https://lms-backend-d72v.onrender.com/api/users/login/', {
     username,
     password
 })
