@@ -4,3 +4,4 @@ __pycache__/
 db.sqlite3
 .env
 *.cpython-*.pyc
+node_modules/
