@@ -17,7 +17,7 @@ function EnrolledCourses() {
     })
     .then(reponse => setEnrolments(reponse.data))
     .catch(error => console.log(error))
-}, [])
+}, [navigate])
 
 return (
     <div style={{

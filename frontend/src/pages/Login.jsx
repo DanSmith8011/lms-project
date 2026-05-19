@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { MdLogin } from 'react-icons/md'
 
 
 function Login(){
@@ -42,7 +43,9 @@ return (
             <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Welcome Back</h2>
             <input type='text' placeholder='Username' value={username} onChange={(e) => setUsername(e.target.value)} />
             <input type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
-            <button style={{ width: '100%', marginTop: '10px' }} onClick={handleLogin}>Login</button>
+            <button style={{ width: '100%', marginTop: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }} onClick={handleLogin}>
+                <MdLogin /> Login
+            </button>
             <p style={{ textAlign: 'center', marginTop: '15px' }}>Don't have an account? <a href='/register'>Register here</a></p>
         </div>
     </div>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { MdSchool } from 'react-icons/md'
 
 function CourseList() {
     const [courses, setCourses] = useState([])
@@ -17,7 +18,7 @@ function CourseList() {
         })
         .then(response => setCourses(response.data))
         .catch(error => console.log(error))
-    }, [])
+    }, [navigate])
 
     const handleEnrol = async (courseId) => {
         const token = localStorage.getItem('access')
@@ -50,7 +51,9 @@ function CourseList() {
             }}>
                 <h3 style={{ marginBottom: '10px' }}>{course.title}</h3>
                 <p style={{ color: '#666', marginBottom: '15px' }}>{course.description}</p>
-                <button onClick={() => handleEnrol(course.id)}>Enrol</button>
+                <button onClick={() => handleEnrol(course.id)} style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+    <MdSchool /> Enrol
+</button>
             </div>
         ))}
     </div>

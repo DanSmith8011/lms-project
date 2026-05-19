@@ -17,7 +17,7 @@ function AdminUsers() {
         })
         .then(response => setUsers(response.data))
         .catch(error => console.log(error))
-    }, [])
+    }, [navigate])
 
    return (
     <div style={{
