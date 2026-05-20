@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import EnrolledCourses from './pages/EnrolledCourse'
 import CreateCourse from './pages/CreateCourses'
 import AdminUsers from './pages/AdminUsers'
+import EditCourse from './pages/EditCourse'
 
 function App(){
   return (
@@ -21,6 +22,7 @@ function App(){
       <Route path='/courses' element={<CourseList />} />
       <Route path='/createCourse' element={<CreateCourse />} />
       <Route path='/AdminUsers' element={<AdminUsers />} />
+      <Route path='/editCourse/:id' element={<EditCourse />} />
       </Routes>
     </BrowserRouter>
   )
