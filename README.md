@@ -241,6 +241,16 @@ This is the enrolled courses page wireframe. It shows a list of courses the stud
 
 This is the admin users page wireframe. It shows a list of all users on the platform displaying their username, email and role.
 
+### Browser Testing
+
+The application was tested on the following browsers:
+
+- Google Chrome - All functionality working correctly
+- Firefox - All functionality working correctly
+
+![Chrome Testing](wireframes/google.png)
+![Firefox Testing](wireframes/firefox.png)
+
 ## Deployment
 
 **Live Application:** https://glittering-flan-17ad35.netlify.app
