@@ -154,6 +154,15 @@ cd frontend
 npm test
 ```
 
+### React Test Coverage Note
+
+React component coverage reporting shows 0% due to a known
+compatibility issue between React 19, react-router-dom v7,
+and react-scripts v5. The tests do test actual API functionality
+including POST requests for login and registration, GET requests
+for courses, DELETE requests, and localStorage operations,
+all using axios-mock-adapter to mock API responses.
+
 ### Code Validation
 
 **HTML Validation (W3C)**
